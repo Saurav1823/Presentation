@@ -287,19 +287,6 @@ Nested structures are useful for solving complex problems.
 
 ---
 
-## 🆕 5. Match Case (Python 3.10+)
-
-`match-case` works similarly to switch-case in other programming languages.
-
-```python
-match day:
-    case 1:
-        print("Monday")
-    case _:
-        print("Invalid")
-```
-
-It makes multiple condition checking cleaner and more readable.
 
 ---
 
