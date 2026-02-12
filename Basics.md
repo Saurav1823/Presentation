@@ -7,7 +7,9 @@
 - Data Types
   - Numeric Types
   - Boolean Type
-  - Sequence Types
+  - String
+  - List
+  - Tuple
   - Set
   - Dictionary
 - Control Flow
@@ -21,17 +23,20 @@
 
 # 🧩 Python Data Types
 
-Data types define the type of value a variable can store.
+Data types define the type of value that can be stored in a variable.  
+Python automatically determines the data type when a value is assigned.
 
 ---
 
 ## 🔢 1. Numeric Types
 
-| Type     | Description        | Example   |
-|----------|-------------------|------------|
-| `int`    | Integer numbers   | `10`, `-5` |
-| `float`  | Decimal numbers   | `3.14`     |
-| `complex`| Complex numbers   | `2+3j`     |
+Python supports three main numeric types:
+
+| Type     | Description              | Example   |
+|----------|--------------------------|------------|
+| `int`    | Whole numbers            | `10`, `-5` |
+| `float`  | Decimal numbers          | `3.14`     |
+| `complex`| Numbers in form `a + bj` | `2+3j`     |
 
 ```python
 a = 10
@@ -39,11 +44,13 @@ b = 3.14
 c = 2 + 3j
 ```
 
+Integers store whole numbers, floats store decimal values, and complex numbers are written in the form `a + bj`.
+
 ---
 
 ## ✅ 2. Boolean Type
 
-Boolean has only two values:
+Boolean data type has only two values:
 
 - `True`
 - `False`
@@ -52,29 +59,31 @@ Boolean has only two values:
 is_student = True
 ```
 
----
-
-## 📦 3. Sequence Types
+Boolean values are mainly used in decision-making and conditional statements.
 
 ---
 
-### 🔤 String (`str`)
+## 🔤 3. String (`str`)
 
-A **string** is a sequence of characters enclosed in quotes (`""` or `''`).  
-Strings are **ordered** and **immutable** (cannot be changed after creation).
+A string is a sequence of characters enclosed in single or double quotes.  
+Strings are ordered and immutable, which means their content cannot be changed after creation.
 
 ```python
 name = "Python"
-print(name[0])     # P
+print(name[0])
 ```
+
+Strings are commonly used to store text such as names, messages, or sentences.
 
 ---
 
-### 📋 List
+## 📋 4. List
 
-- Ordered
-- Mutable
-- Allows duplicates
+A list is used to store multiple values in a single variable.
+
+- Ordered  
+- Mutable  
+- Allows duplicate values  
 
 ```python
 numbers = [1, 2, 3, 4]
@@ -83,49 +92,58 @@ numbers = [1, 2, 3, 4]
 ### Common List Methods
 
 ```python
-numbers.append(5)      # Adds element at end
-numbers.remove(2)      # Removes first occurrence
-print(numbers)
+numbers.append(5)     # Adds element at the end
+numbers.remove(2)     # Removes first occurrence of value
 ```
+
+Lists are widely used because they allow modification after creation.
 
 ---
 
-### 📌 Tuple
+## 📌 5. Tuple
 
-- Ordered
-- Immutable
+A tuple is similar to a list but is immutable.
+
+- Ordered  
+- Cannot be modified after creation  
 
 ```python
 coordinates = (10, 20)
 ```
 
+Tuples are used when data should remain constant.
+
 ---
 
-## 🎯 4. Set
+## 🎯 6. Set
 
-- Unordered
-- No duplicates
-- Mutable
+A set is an unordered collection of unique elements.
+
+- Unordered  
+- No duplicates  
+- Mutable  
 
 ```python
 unique_numbers = {1, 2, 3, 3}
-print(unique_numbers)
 ```
 
 ### Common Set Methods
 
 ```python
-unique_numbers.add(4)       # Adds element
-unique_numbers.remove(1)    # Removes element
+unique_numbers.add(4)      # Adds element
+unique_numbers.remove(1)   # Removes element
 ```
+
+Sets automatically remove duplicate values.
 
 ---
 
-## 📖 5. Dictionary
+## 📖 7. Dictionary
 
-- Key–Value pairs
-- Mutable
-- Keys must be unique
+A dictionary stores data in key-value pairs.
+
+- Mutable  
+- Keys must be unique  
 
 ```python
 student = {
@@ -137,49 +155,52 @@ student = {
 ### Common Dictionary Methods
 
 ```python
-student.keys()      # Returns all keys
-student.get("age")  # Safely gets value
+student.keys()       # Returns all keys
+student.get("age")   # Safely accesses value
 ```
+
+Dictionaries are useful for storing related data like student information, product details, etc.
 
 ---
 
 # 🔁 Control Flow in Python
 
-Control flow determines how the program executes statements.
+Control flow determines the order in which statements are executed in a program.  
+It allows programs to make decisions and repeat actions.
 
 ---
 
 ## 🔀 1. Conditional Statements
 
-### ▶️ if Statement
+Conditional statements are used for decision-making.
+
+### if Statement
 
 ```python
-age = 18
-
 if age >= 18:
-    print("Eligible to vote")
+    print("Eligible")
 ```
+
+The `if` statement executes a block of code only if the condition is true.
 
 ---
 
-### ▶️ if-else Statement
+### if-else Statement
 
 ```python
-number = 5
-
 if number % 2 == 0:
     print("Even")
 else:
     print("Odd")
 ```
 
+`if-else` is used when there are two possible outcomes.
+
 ---
 
-### ▶️ if-elif-else Statement
+### if-elif-else Statement
 
 ```python
-marks = 85
-
 if marks >= 90:
     print("Grade A")
 elif marks >= 75:
@@ -188,93 +209,73 @@ else:
     print("Grade C")
 ```
 
+Used when multiple conditions need to be checked.
+
 ---
 
 ## 🔄 2. Loops
 
-### 🔁 for Loop
+Loops are used to repeat a block of code multiple times.
+
+---
+
+### for Loop
 
 ```python
 for i in range(5):
     print(i)
 ```
 
-Looping through list:
-
-```python
-fruits = ["apple", "banana", "mango"]
-
-for fruit in fruits:
-    print(fruit)
-```
+The `for` loop is generally used when the number of iterations is known.
 
 ---
 
-### 🔁 while Loop
+### while Loop
 
 ```python
-count = 1
-
 while count <= 5:
     print(count)
-    count += 1
 ```
+
+The `while` loop runs as long as the condition remains true.
 
 ---
 
 ## ⛔ 3. Loop Control Statements
 
-### 🔴 break
-
-Stops the loop.
+### break
 
 ```python
-for i in range(10):
-    if i == 5:
-        break
+break
 ```
+
+Stops the loop completely.
 
 ---
 
-### 🟡 continue
-
-Skips current iteration.
+### continue
 
 ```python
-for i in range(5):
-    if i == 2:
-        continue
+continue
 ```
+
+Skips the current iteration and moves to the next one.
 
 ---
 
-### ⚪ pass
-
-Placeholder statement.
+### pass
 
 ```python
-for i in range(5):
-    pass
+pass
 ```
+
+Acts as a placeholder and does nothing.
 
 ---
 
 ## 🔂 4. Nested Structures
 
-### Nested if
-
-```python
-age = 20
-citizen = True
-
-if age >= 18:
-    if citizen:
-        print("Eligible to vote")
-```
-
----
-
-### Nested Loop
+Nesting means placing one control structure inside another.
 
 ```python
 for i in range(3):
@@ -282,21 +283,32 @@ for i in range(3):
         print(i, j)
 ```
 
+Nested structures are useful for solving complex problems.
+
 ---
 
 ## 🆕 5. Match Case (Python 3.10+)
 
-```python
-day = 2
+`match-case` works similarly to switch-case in other programming languages.
 
+```python
 match day:
     case 1:
         print("Monday")
-    case 2:
-        print("Tuesday")
     case _:
         print("Invalid")
 ```
 
+It makes multiple condition checking cleaner and more readable.
+
 ---
 
+# 🎯 Conclusion
+
+- Data types define how data is stored in Python.
+- Control flow defines how the program executes decisions and repetitions.
+- Both are fundamental concepts in Python programming.
+
+---
+
+# 🚀 End of Presentation
