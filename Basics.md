@@ -303,12 +303,4 @@ It makes multiple condition checking cleaner and more readable.
 
 ---
 
-# 🎯 Conclusion
 
-- Data types define how data is stored in Python.
-- Control flow defines how the program executes decisions and repetitions.
-- Both are fundamental concepts in Python programming.
-
----
-
-# 🚀 End of Presentation
