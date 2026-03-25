@@ -1,4 +1,4 @@
-````markdown id="uqpu0w"
+
 # JavaScript Core Concepts
 
 ## Regular Function
